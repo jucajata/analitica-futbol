@@ -13,7 +13,7 @@ sleep 5
 docker exec -it postgres-af sh -c 'createdb dbaf -U postgres'
 
 # Copy sql file for create tables
-#docker cp create_tables.sql postgres-af:/home
+docker cp create_tables.sql postgres-af:/home
 
 # Create tables
-#docker exec -it postgres-af psql -U postgres -d mydb -a -f /home/create_tables.sql
+docker exec -it postgres-af psql -U postgres -d dbaf -a -f /home/create_tables.sql
